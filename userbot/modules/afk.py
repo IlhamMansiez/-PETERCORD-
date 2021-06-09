@@ -11,7 +11,7 @@ from userbot import ALIVE_NAME, PETERCORDversion
 from PETERCORDBOT.utils import admin_cmd, edit_or_reply
 from userbot.cmdhelp import CmdHelp
 
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "REBEL User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "PetercordBot"
 
 PETERCORD = bot.uid
 
