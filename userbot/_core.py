@@ -10,7 +10,7 @@ from userbot import *
 from userbot import bot as PETERCORDBOT
 
 DELETE_TIMEOUT = 5
-DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "PETERCORD User"
+DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else "PETERCORD"
 PETERCORD_logo = "./PetercordBot/logo_petercord.png"
 h1m4n5hu0p = PETERCORDBOT.uid
 PETERCORD = f"[{DEFAULTUSER}](tg://user?id={h1m4n5hu0p})"
@@ -23,8 +23,8 @@ async def send(event):
     message_id = event.message.id
     thumb = PETERCORD_logo
     input_str = event.pattern_match.group(1)
-    omk = f"**⍟ Plugin name ≈** `{input_str}`\n**⍟ Uploaded by ≈** {PETERCORD}\n\n⚡ **[LEGENDARY AF PETERCORDBOT](https://t.me/TEAMSquadUserbotSupport)** ⚡"
-    the_plugin_file = "./userbot/plugins/{}.py".format(input_str)
+    omk = f"**⍟ Plugin name ≈** `{input_str}`\n**⍟ Uploaded by ≈** {PETERCORD}\n\n⚡ **[PETERCORDBOT](https://t.me/TEAMSquadUserbotSupport)** ⚡"
+    the_plugin_file = "./userbot/modules/{}.py".format(input_str)
     if os.path.exists(the_plugin_file):
         lauda = await event.client.send_file(
             event.chat_id,
@@ -132,9 +132,9 @@ async def load(event):
 CmdHelp("core").add_command(
   "install", "<reply to a .py file>", "Installs the replied python file if suitable to userbot codes. (TEMPORARILY DISABLED AS HACKERS MAKE YOU INSTALL SOME PLUGINS AND GET YOUR DATA)"
 ).add_command(
-  "uninstall", "<plugin name>", "Uninstalls the given plugin from userbot. To get that again do .restart", "uninstall alive"
+  "uninstall", "<modules name>", "Uninstalls the given plugin from userbot. To get that again do .restart", "uninstall alive"
 ).add_command(
-  "load", "<plugin name>", "Loades the unloaded plugin to your userbot", "load alive"
+  "load", "<modules name>", "Loades the unloaded plugin to your userbot", "load alive"
 ).add_command(
   "unload", "<plugin name>", "Unloads the plugin from your userbot", "unload alive"
 ).add_command(
